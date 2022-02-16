@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'icons';
-  src:  url('assets/fonts/icons.eot?ivrre6');
-  src:  url('assets/fonts/icons.eot?ivrre6#iefix') format('embedded-opentype'),
-    url('assets/fonts/icons.ttf?ivrre6') format('truetype'),
-    url('assets/fonts/icons.woff?ivrre6') format('woff'),
-    url('assets/fonts/icons.svg?ivrre6#icons') format('svg');
+  src:  url('../assets/iconsfont//icons.eot?ll3u2r');
+  src:  url('../assets/iconsfont//icons.eot?ll3u2r#iefix') format('embedded-opentype'),
+    url('../assets/iconsfont//icons.ttf?ll3u2r') format('truetype'),
+    url('../assets/iconsfont//icons.woff?ll3u2r') format('woff'),
+    url('../assets/iconsfont//icons.svg?ll3u2r#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"]::before, 
-[class*=" icon-"]::before {
+[class^="_icon-"]:before,
+[class*=" _icon-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: never;
@@ -26,15 +26,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-facebook:before {
+._icon-facebook:before {
   content: "\e900";
-  color: #fff;
 }
-.icon-instagramm:before {
+._icon-twitter:before {
   content: "\e901";
-  color: #fff;
 }
-.icon-twitter:before {
+._icon-instagram:before {
   content: "\e902";
-  color: #fff;
 }
