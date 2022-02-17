@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batman 2022</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="css/iconsfont.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <button class="header__burger burger"></button>
+      <nav class="header__navigation navigation">
+        <button class="header__burger_close burger_close"></button>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="index.html" class="navigation__link">Главная</a>
+          </li>
+          <li class="navigation__item navigation__item_active">
+            <a class="navigation__link">Видео</a>
+          </li>
+          <li class="navigation__item">
+            <a href="photo.html" class="navigation__link">Фото</a>
+          </li>
+        </ul>
+        <p class="header__hashtag">#TheBatman</p>
+        <ul class="header__social social">
+          <li class="social__item">
+            <a href="#" class="social__link _icon-facebook"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link _icon-twitter"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link _icon-instagram"></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__mute mute">
+        <input type="checkbox" class="mute__checkbox" id="'mute">
+        <label for="mute" class="mute__label"></label>
+      </div>
+    </header>
+    <main class="main main_slider">
+      <div class="slider-main swiper">
+        <div class="slider-main__wrapper swiper-wrapper">
+          <div class="slider-main__slide swiper-slide">
+            <video class="slider-main__video" controls poster="assets/video/trailer01.jpg">
+              <source src="assets/video/trailer01.webm" type="video/webm">
+              <source src="assets/video/trailer01.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="slider-main__slide swiper-slide">
+            <video class="slider-main__video" controls poster="assets/video/trailer02.jpg">
+              <source src="assets/video/trailer02.webm" type="video/webm">
+              <source src="assets/video/trailer02.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="slider-main__slide swiper-slide">
+            <video class="slider-main__video" controls poster="assets/video/trailer03.jpg">
+              <source src="assets/video/trailer03.webm" type="video/webm">
+              <source src="assets/video/trailer03.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <button class="pagination__arrow"></button>
+
+        <div class="slider-thumbs swiper">
+          <div class="slider-thumbs__wrapper swiper-wrapper">
+            <div class="slider-thumbs__slide swiper-slide">
+              <img src="assets/video/trailer01.jpg" alt="фото" width="260" height="100">
+            </div>
+            <div class="slider-thumbs__slide swiper-slide">
+              <img src="assets/video/trailer02.jpg" alt="фото" width="260" height="100">
+            </div>
+            <div class="slider-thumbs__slide swiper-slide">
+              <img src="assets/video/trailer03.jpg" alt="фото" width="260" height="100">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <footer class="footer">
+      <ul class="footer__links">
+        <li class="footer__item">
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Условия эксплуатации</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Выбор объявлений</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Настройки файлов cookie</a>
+        </li>
+      </ul>
+      <p class="footer__copyright">© 2022 WBEI TM & © DC</p>
+    </footer>
+  </div>
+  
+  <script defer src="js/swiper-bundle.min.js"></script>
+  <script defer src="js/script.js"></script>
+</body>
+</html>
