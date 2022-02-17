@@ -18,14 +18,14 @@
       <nav class="header__navigation navigation">
         <button class="header__burger_close burger_close"></button>
         <ul class="navigation__list">
-          <li class="navigation__item navigation__item_active">
-            <a class="navigation__link">Главная</a>
+          <li class="navigation__item">
+            <a href="index.html" class="navigation__link">Главная</a>
           </li>
           <li class="navigation__item">
             <a href="video.html" class="navigation__link">Видео</a>
           </li>
-          <li class="navigation__item">
-            <a href="photo.html" class="navigation__link">Фото</a>
+          <li class="navigation__item navigation__item_active">
+            <a class="navigation__link">Фото</a>
           </li>
         </ul>
         <p class="header__hashtag">#TheBatman</p>
@@ -46,10 +46,39 @@
         <label for="mute" class="mute__label"></label>
       </div>
     </header>
-    <main class="main main_index">
-      <div class="main__logo">
-        <img src="assets/img/logo.png" alt="Логотип к фильму Бэтмен" width="329" height="235">
+    <main class="main main_slider">
+      <div class="slider-main swiper">
+        <div class="slider-main__wrapper swiper-wrapper">
+          <div class="slider-main__slide swiper-slide">
+            <img src="assets/img/photo/photo01.jpg" alt="фото">
+          </div>
+          <div class="slider-main__slide swiper-slide">
+            <img src="assets/img/photo/photo02.jpg" alt="фото">
+          </div>
+          <div class="slider-main__slide swiper-slide">
+            <img src="assets/img/photo/photo03.jpg" alt="фото">
+          </div>
+        </div>
       </div>
+
+      <div class="pagination">
+        <button class="pagination__arrow"></button>
+
+        <div class="slider-thumbs swiper">
+          <div class="slider-thumbs__wrapper swiper-wrapper">
+            <div class="slider-thumbs__slide swiper-slide">
+              <img src="assets/img/photo/photo01-thumbs.jpg" alt="фото" width="260" height="100">
+            </div>
+            <div class="slider-thumbs__slide swiper-slide">
+              <img src="assets/img/photo/photo02-thumbs.jpg" alt="фото" width="260" height="100">
+            </div>
+            <div class="slider-thumbs__slide swiper-slide">
+              <img src="assets/img/photo/photo03-thumbs.jpg" alt="фото" width="260" height="100">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </main>
     <footer class="footer">
       <ul class="footer__links">

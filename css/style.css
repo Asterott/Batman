@@ -17,13 +17,18 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 /*--------------------*/
 
 :root {
-    --color-red: #E90000;
+	--color-red: #E90000;
 }
 
 body {
 	font-family: Roboto, sans-serif;
 	background-color: #000;
 	color: #fff;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 /* Прижать footer */
@@ -181,6 +186,11 @@ body {
 	right: 1px;
 }
 
+.main {
+	position: relative;
+	height: 100%;
+}
+
 .main_index {
 	display: flex;
 	align-items: center;
@@ -191,8 +201,10 @@ body {
 }
 
 .main__logo {
-	width: 329px;
 	animation: zoomIn 1s;
+}
+
+.main__logo img {
 }
 
 @keyframes zoomIn {
@@ -201,11 +213,9 @@ body {
 	}
 }
 
-.main__logo img {
-	max-width: 100%;
-}
-
 .footer {
+	position: relative;
+	z-index: 500;
 	min-height: 48px;
 	padding: 10px 0;
 }
@@ -239,6 +249,72 @@ body {
 	text-transform: uppercase;
 	color: #6A6A6A;
 	text-align: center;
+}
+
+.main_slider {
+	height: calc(100% - 120px);
+}
+
+.slider-main {
+	height: 100%;
+}
+
+.slider-main__wrapper {
+}
+
+.slider-main__slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* text-align: center; */
+}
+
+.slider-main__slide img {
+	/* width: 100%; */
+}
+
+.pagination {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 400;
+	padding: 12px 20px 15px;
+	background-color: #000;
+	min-height: 166px;
+}
+
+.pagination__arrow {
+	display: block;
+	margin: 0 auto 26px;
+	width: 0;
+	height: 0;
+	border-left: 7px solid  transparent;
+	border-right: 6px solid  transparent;
+	border-bottom: 6px solid  transparent;
+	border-top: 7px solid #fff;
+	background-color: transparent;
+	transition: .3s all ease-in-out;
+}
+
+.pagination__arrow:hover {
+	border-top-color: var(--color-red);
+}
+
+.slider-thumbs {
+	max-width: 820px;
+}
+
+.slider-thumbs__wrapper {
+
+}
+.slider-thumbs__slide {}
+
+
+.slider-main__video {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
 
 @media (max-width: 1024px) {
@@ -341,6 +417,7 @@ body {
 	}
 
 	.footer {
+		height: 50px;
 		padding: 11px 20px 10px;
 	}
 
@@ -352,5 +429,13 @@ body {
 
 	.footer__links {
 		margin-bottom: 7px;
+	}
+
+	.pagination {
+		min-height: 80px;
+	}
+
+	.pagination__arrow {
+		margin-bottom: 6px;
 	}
 }
