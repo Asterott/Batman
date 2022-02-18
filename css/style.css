@@ -309,7 +309,7 @@ img {
 .slider-main__video {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 @media (max-width: 1024px) {
@@ -434,5 +434,5 @@ img {
   .pagination__arrow {
     margin-bottom: 6px;
   }
-  
+
 }
