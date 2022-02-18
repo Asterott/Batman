@@ -11,6 +11,7 @@ navigationClose.addEventListener('click', () => {
   navigation.classList.remove('navigation_active');
 });
 
+
 // Фоновая музыка
 try {
 const mute = document.querySelector('.mute__checkbox'),
