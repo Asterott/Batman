@@ -40,43 +40,47 @@ mute.addEventListener('change', checkMute);
 
 // Слайдер
 try {
-const thumbsSwiper = new Swiper('.slider-thumbs', {
-  loop: true,
-  spaceBetween: 20,
-  slidesPerView: 3,
-  centeredSlides: true,
-  loopedSlides: 4,
-});
+  const pagination = document.querySelector('.pagination');
+  const paginationButton = document.querySelector('.pagination__arrow');
 
-thumbsSwiper.on('click', (swiper) => {
-  swiper.slideTo(swiper.clickedIndex)
-});
+  const thumbsSwiper = new Swiper('.slider-thumbs', {
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 3,
+    centeredSlides: true,
+    loopedSlides: 4,
+  });
 
-const mainSwiper = new Swiper('.slider-main', {
-  loop: true,
-  spaceBetween: 10,
-  loopedSlides: 4,
-});
+  thumbsSwiper.on('click', (swiper) => {
+    swiper.slideTo(swiper.clickedIndex);
+    pagination.classList.toggle('pagination_active');
+  });
 
-thumbsSwiper.controller.control = mainSwiper;
-mainSwiper.controller.control = thumbsSwiper;
+  const mainSwiper = new Swiper('.slider-main', {
+    loop: true,
+    spaceBetween: 10,
+    loopedSlides: 4,
+  });
 
-const videos = document.querySelectorAll('video');
+  thumbsSwiper.controller.control = mainSwiper;
+  mainSwiper.controller.control = thumbsSwiper;
 
-sliderMain.on('slideChange', () => {
-  for (let i = 0; i < videos.length; i += 1) {
-    videos[i].pause();
-  }
-});
+  const videos = document.querySelectorAll('video');
+
+  sliderMain.on('slideChange', () => {
+    for (let i = 0; i < videos.length; i += 1) {
+      videos[i].pause();
+    }
+  });
+
+  // Пагинация
+
+
+
+  paginationButton.addEventListener('click', () => {
+    pagination.classList.toggle('pagination_active')
+  });
 
 } catch {
   console.log('На этой странице нет слайдера');
 }
-
-// Пагинация
-const pagination = document.querySelector('.pagination'),
-paginationButton = document.querySelector('.pagination__arrow');
-
-paginationButton.addEventListener('click', () => {
-  pagination.classList.toggle('pagination_active')
-});

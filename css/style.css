@@ -338,12 +338,12 @@ img {
   .navigation {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -240px;
     bottom: 0;
     z-index: 600;
     height: 100vh;
     width: 240px;
-    transform: translateX(-240px);
+    transform: translateX(0);
     background-color: #260707;
     flex-direction: column;
     justify-content: flex-start;
@@ -354,7 +354,7 @@ img {
   }
 
   .navigation_active {
-    transform: translateX(0);
+    transform: translateX(240px);
   }
 
   .navigation_close {
