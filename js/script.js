@@ -49,7 +49,6 @@ try {
 
   thumbsSwiper.on('click', (swiper) => {
     swiper.slideTo(swiper.clickedIndex);
-    pagination.classList.toggle('pagination_active')
   });
 
   const mainSwiper = new Swiper('.slider-main', {
@@ -69,6 +68,11 @@ try {
       videos[i].pause();
     }
   });
+
+  // mainSwiper.on('click', (swiper) => {
+  //   swiper.slideTo(swiper.clickedIndex);
+  //   pagination.classList.toggle('pagination_active')
+  // });
 
   // Пагинация
   const pagination = document.querySelector('.pagination'),
