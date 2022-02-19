@@ -177,7 +177,7 @@ img {
   display: flex;
   align-items: center;
   padding-left: 180px;
-  background-image: url('../assets/img/main_bg.jpg');
+  background-image: url('../assets/img/main_bg.webp');
   background-position: top;
   background-size: cover;
   image-rendering: optimizeQuality;    /* (firefox) */
@@ -374,8 +374,13 @@ img {
   }
 
   .navigation__item {
+    width: 100%;
     padding: 12px 0;
     margin: 0 0 6px;
+  }
+
+  .navigation__link {
+    display: block;
   }
 
   .header__hashtag {
@@ -404,7 +409,7 @@ img {
   .main_index {
     align-items: flex-end;
     justify-content: center;
-    background-image: linear-gradient(0.11deg, rgba(0, 0, 0, 0.76) 32.14%, rgba(255, 0, 0, 0) 72.56%), url('../assets/img/main_bg-m.jpg');
+    background-image: linear-gradient(0.11deg, rgba(0, 0, 0, 0.76) 32.14%, rgba(255, 0, 0, 0) 72.56%), url('../assets/img/main_bg-m.webp');
     padding: 0 0 64px;
   }
   

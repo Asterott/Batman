@@ -39,10 +39,6 @@ try {
 
 // Слайдер
 try {
-  const pagination = document.querySelector('.pagination'),
-  paginationVideo = document.querySelector('.pagination_video'),
-  paginationButton = document.querySelector('.pagination__arrow');
-
   const thumbsSwiper = new Swiper('.slider-thumbs', {
     loop: true,
     spaceBetween: 20,
@@ -52,8 +48,8 @@ try {
   });
 
   thumbsSwiper.on('click', (swiper) => {
-    swiper.slideTo(swiper.clickedIndex)
-    paginationVideo.classList.toggle('pagination_active')
+    swiper.slideTo(swiper.clickedIndex);
+    pagination.classList.toggle('pagination_active')
   });
 
   const mainSwiper = new Swiper('.slider-main', {
@@ -65,15 +61,19 @@ try {
   thumbsSwiper.controller.control = mainSwiper;
   mainSwiper.controller.control = thumbsSwiper;
 
+  
   const videos = document.querySelectorAll('video');
 
-  sliderMain.on('slideChange', () => {
+  mainSwiper.on('slideChange', () => {
     for (let i = 0; i < videos.length; i += 1) {
       videos[i].pause();
     }
   });
 
-// Пагинация
+  // Пагинация
+  const pagination = document.querySelector('.pagination'),
+  paginationButton = document.querySelector('.pagination__arrow');
+
   paginationButton.addEventListener('click', () => {
     pagination.classList.toggle('pagination_active')
   });
