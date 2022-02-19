@@ -309,7 +309,13 @@ img {
 .slider-main__video {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+@media (max-width: 1280px) {
+  .slider-main__video {
+    object-fit: contain;
+  }
 }
 
 @media (max-width: 1024px) {
