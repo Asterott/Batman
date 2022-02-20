@@ -188,7 +188,7 @@ img {
   background-image: url('../assets/img/main_bg.webp');
   background-position: top;
   background-size: cover;
-  image-rendering: optimizeQuality;    /* (firefox) */
+  image-rendering: optimizeQuality;    /* (! todo для firefox) */
 }
 
 .main__logo {
