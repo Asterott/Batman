@@ -69,11 +69,6 @@ try {
     }
   });
 
-  // mainSwiper.on('click', (swiper) => {
-  //   swiper.slideTo(swiper.clickedIndex);
-  //   pagination.classList.toggle('pagination_active')
-  // });
-
   // Пагинация
   const pagination = document.querySelector('.pagination'),
   paginationButton = document.querySelector('.pagination__arrow');

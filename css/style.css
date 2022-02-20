@@ -82,8 +82,16 @@ img {
   margin-right: 14px;
 }
 
+.navigation__item:hover {
+  color: var(--color-red);
+}
+
 .navigation__item_active {
   background-color: var(--color-red);
+}
+
+.navigation__item_active:hover {
+  color: #fff;
 }
 
 .navigation__link {
@@ -408,6 +416,19 @@ img {
 
   .footer__links {
     text-align: center;
+  }
+
+  .social__link:hover {
+    color: #fff;
+  }
+  .footer__link:hover {
+    color: #fff;
+  }
+  .pagination__arrow:hover {
+    border-bottom-color: #fff;
+  }
+  .pagination_active .pagination__arrow:hover {
+    border-top-color: #fff;
   }
 }
 
